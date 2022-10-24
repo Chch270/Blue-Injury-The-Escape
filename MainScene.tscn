@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://GunControler.gd" type="Script" id=3]
+[ext_resource path="res://Gun.tscn" type="PackedScene" id=4]
+[ext_resource path="res://PlayerCamera.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.976471, 0.168627, 0.168627, 1 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+
+[node name="MainScene" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Player" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51086, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Body" type="MeshInstance" parent="Player"]
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Eyes" type="MeshInstance" parent="Player/Body"]
+transform = Transform( 0.24, 0, 0, 0, -8.74228e-09, 0.5, 0, -0.2, -2.18557e-08, 1, -2.91216e-08, -0.666224 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Hand" type="Position3D" parent="Player/Body"]
+transform = Transform( 1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0.777408, 0.746236, -0.0805001 )
+
+[node name="GunControler" type="Node" parent="Player"]
+script = ExtResource( 3 )
+Weapon = ExtResource( 4 )
+
+[node name="Ground" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+use_collision = true
+width = 40.0
+depth = 40.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -2.18557e-08, -0.866025, 0.5, -3.78552e-08, 0.5, 0.866025, -1, 1.77636e-15, -4.37114e-08, 8, 10, 0 )
+shadow_enabled = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 8.44439e-08, -2.26267e-08, 0, 0.258819, 0.965926, 8.74228e-08, 0.965926, -0.258819, 0, 15, -6 )
+script = ExtResource( 5 )
