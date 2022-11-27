@@ -5,6 +5,7 @@
 [sub_resource type="Environment" id=1]
 glow_enabled = true
 glow_bloom = 0.1
+adjustment_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource( 1 )
