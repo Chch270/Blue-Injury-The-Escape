@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Blue- Injury- The- Escape"
-run/main_scene="res://MainScene.tscn"
+run/main_scene="res://menu.tscn"
 config/icon="res://icon.png"
 
 [gui]
