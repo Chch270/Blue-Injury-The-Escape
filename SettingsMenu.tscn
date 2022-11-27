@@ -152,7 +152,7 @@ margin_right = 862.0
 margin_bottom = 297.0
 size_flags_horizontal = 10
 
-[node name="MinBrightnessVal2" type="Label" parent="SettingTab/Video/MarginContainer/VideoSettings/BrightnessContainer"]
+[node name="MinBrightnessVal" type="Label" parent="SettingTab/Video/MarginContainer/VideoSettings/BrightnessContainer"]
 margin_top = 1.0
 margin_right = 8.0
 margin_bottom = 15.0
@@ -213,13 +213,13 @@ margin_right = 862.0
 margin_bottom = 16.0
 size_flags_horizontal = 10
 
-[node name="MinBrightnessVal2" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer"]
+[node name="MinMasterVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer"]
 margin_top = 1.0
 margin_right = 21.0
 margin_bottom = 15.0
 text = "-50"
 
-[node name="BrightnessSlider" type="HSlider" parent="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer"]
+[node name="MasterVolSlider" type="HSlider" parent="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer"]
 margin_left = 25.0
 margin_right = 425.0
 margin_bottom = 16.0
@@ -229,7 +229,7 @@ min_value = -50.0
 max_value = 0.0
 value = -10.0
 
-[node name="MaxBrightnessVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer"]
+[node name="MaxMasterVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer"]
 margin_left = 429.0
 margin_top = 1.0
 margin_right = 437.0
@@ -250,13 +250,13 @@ margin_right = 862.0
 margin_bottom = 57.0
 size_flags_horizontal = 10
 
-[node name="MinBrightnessVal2" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer"]
+[node name="MinMusicVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer"]
 margin_top = 1.0
 margin_right = 21.0
 margin_bottom = 15.0
 text = "-50"
 
-[node name="BrightnessSlider" type="HSlider" parent="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer"]
+[node name="MusicVolSlider" type="HSlider" parent="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer"]
 margin_left = 25.0
 margin_right = 425.0
 margin_bottom = 16.0
@@ -266,7 +266,7 @@ min_value = -50.0
 max_value = 0.0
 value = -10.0
 
-[node name="MaxBrightnessVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer"]
+[node name="MaxMusicVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer"]
 margin_left = 429.0
 margin_top = 1.0
 margin_right = 437.0
@@ -287,13 +287,13 @@ margin_right = 862.0
 margin_bottom = 98.0
 size_flags_horizontal = 10
 
-[node name="MinBrightnessVal2" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer"]
+[node name="MinSfxVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer"]
 margin_top = 1.0
 margin_right = 21.0
 margin_bottom = 15.0
 text = "-50"
 
-[node name="BrightnessSlider" type="HSlider" parent="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer"]
+[node name="SfxVolSlider" type="HSlider" parent="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer"]
 margin_left = 25.0
 margin_right = 425.0
 margin_bottom = 16.0
@@ -303,7 +303,7 @@ min_value = -50.0
 max_value = 0.0
 value = -10.0
 
-[node name="MaxBrightnessVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer"]
+[node name="MaxSfxVal" type="Label" parent="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer"]
 margin_left = 429.0
 margin_top = 1.0
 margin_right = 437.0
@@ -372,3 +372,14 @@ margin_right = 444.0
 margin_bottom = 15.0
 size_flags_horizontal = 10
 text = "3"
+
+[connection signal="item_selected" from="SettingTab/Video/MarginContainer/VideoSettings/DispOptBtn" to="." method="_on_DispOptBtn_item_selected"]
+[connection signal="toggled" from="SettingTab/Video/MarginContainer/VideoSettings/VsyncBtn" to="." method="_on_VsyncBtn_toggled"]
+[connection signal="toggled" from="SettingTab/Video/MarginContainer/VideoSettings/DispFpsBtn" to="." method="_on_DispFpsBtn_toggled"]
+[connection signal="value_changed" from="SettingTab/Video/MarginContainer/VideoSettings/FpsContainer/MaxFpsSlider" to="." method="_on_MaxFpsSlider_value_changed"]
+[connection signal="toggled" from="SettingTab/Video/MarginContainer/VideoSettings/BloomBtn" to="." method="_on_BloomBtn_toggled"]
+[connection signal="value_changed" from="SettingTab/Video/MarginContainer/VideoSettings/BrightnessContainer/BrightnessSlider" to="." method="_on_BrightnessSlider_value_changed"]
+[connection signal="value_changed" from="SettingTab/Audio/MarginContainer/AudioSettings/MasterContainer/MasterVolSlider" to="." method="_on_MasterVolSlider_value_changed"]
+[connection signal="value_changed" from="SettingTab/Audio/MarginContainer/AudioSettings/MusicContainer/MusicVolSlider" to="." method="_on_MusicVolSlider_value_changed"]
+[connection signal="value_changed" from="SettingTab/Audio/MarginContainer/AudioSettings/SfxContainer/SfxVolSlider" to="." method="_on_SfxVolSlider_value_changed"]
+[connection signal="value_changed" from="SettingTab/Gameplay/MarginContainer/GameplaySettings/MouseSensiContainer/MouseSensiSlider" to="." method="_on_MouseSensiSlider_value_changed"]
