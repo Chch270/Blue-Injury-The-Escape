@@ -1,6 +1,13 @@
 extends KinematicBody
 
 onready var gun_controller = $GunControler;
+export var mouse_sensitivity = .1
+
+func _ready():
+	GlobalSettings.connect("mouse_sens_updated", self, "_on_mouse_sens_updated")
+
+func _on_mouse_sens_updated(value):
+	mouse_sensitivity = value
 
 var speed = 7;
 var hp = 100;
