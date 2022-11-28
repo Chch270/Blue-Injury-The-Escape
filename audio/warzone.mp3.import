@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/warzone.mp3-bda15c609babcf5523ab01f378851fbe.mp3str"
+
+[deps]
+
+source_file="res://audio/warzone.mp3"
+dest_files=[ "res://.import/warzone.mp3-bda15c609babcf5523ab01f378851fbe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
