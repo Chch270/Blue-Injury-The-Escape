@@ -27,9 +27,3 @@ func _process(delta):
 	var round_value = round(animated_health)
 	number_label.text = str(round_value)
 	bar.value = round_value
-
-
-func _on_Player_died():
-	var start_color = Color(1.0, 1.0, 1.0, 1.0)
-	var end_color = Color(1.0, 1.0, 1.0, 0.0)
-	tween.interpolate_property(self, "modulate", start_color, end_color, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
