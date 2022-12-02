@@ -15,13 +15,9 @@ func _ready():
 
 func _on_Player_health_changed(player_health):
 	update_health(player_health)
-	print(player_health)
 
 
 func update_health(new_value):
-	number_label.text = str(new_value)
-	bar.value = new_value
-	print("bar : ", bar.value)
 	tween.interpolate_property(self, "animated_health", animated_health, new_value, 0.6, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	if not tween.is_active():
 		tween.start()
