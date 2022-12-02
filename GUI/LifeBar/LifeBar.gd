@@ -8,17 +8,20 @@ var animated_health = 0
 
 
 func _ready():
-	var player_max_health = 100
-	bar.max_value = 100
-	update_health(100)
+	var player_max_hp = 10
+	bar.max_value = player_max_hp
+	update_health(player_max_hp)
 
 
 func _on_Player_health_changed(player_health):
 	update_health(player_health)
+	print(player_health)
 
 
 func update_health(new_value):
-    #print("I'm hit ", new_value)
+	number_label.text = str(new_value)
+	bar.value = new_value
+	print("bar : ", bar.value)
 	tween.interpolate_property(self, "animated_health", animated_health, new_value, 0.6, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	if not tween.is_active():
 		tween.start()

@@ -2,12 +2,11 @@ extends Node
 
 class_name Stats
 
-export var max_hp = 10
-
-onready var current_hp = max_hp
-
 signal you_died_signal
 signal health_changed
+
+export var max_hp = 10
+var current_hp = max_hp
 
 func _ready():
 	pass # Replace with function body.
