@@ -34,8 +34,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("left_click"):
 		gun_controller.shoot();
 	if Input.is_key_pressed(KEY_R):
-		gun_controller.reload(30);
+		gun_controller.reload();
 
 
-func _on_Stats_you_died_signal():
+func _on_Stats_you_died_signal(give_score):
 	queue_free();

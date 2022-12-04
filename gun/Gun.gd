@@ -16,18 +16,16 @@ var is_reloading = false;
 export var muzzle_speed = 30;
 export var millis_between_shots = 100;
 
-var nb_ammo = 30;
+signal update_ammo;
 
-var max_ammo = 30;
+export var mag_capacity = 30;
+var nb_ammo = mag_capacity;
 
 func _ready():
+	nb_ammo = mag_capacity;
 	rof_time.wait_time = millis_between_shots / 1000.0;
 	reload_time.wait_time = 2;
 
-
-# warning-ignore:unused_argument
-func _process(delta):
-	pass
 
 func shoot():
 	if can_shot && nb_ammo > 0 && is_reloading == false:
@@ -39,6 +37,7 @@ func shoot():
 		can_shot = false;
 		rof_time.start();
 		nb_ammo -= 1;
+		emit_signal("update_ammo", nb_ammo, mag_capacity);
 		$AnimationPlayer.play("Fire");
 		var sound = sound_direct.instance();
 		add_child(sound);
@@ -50,17 +49,16 @@ func shoot():
 		add_child(sound);
 		sound.play_sound(sound_empty_shot);
 
-func reload(var ammo):
-	if nb_ammo < max_ammo:
-		nb_ammo += ammo;
-		if (nb_ammo > max_ammo):
-			nb_ammo = max_ammo;
+func reload():
+	if nb_ammo < mag_capacity:
+		nb_ammo = mag_capacity;
 		is_reloading = true;
 		reload_time.start()
 		$AnimationPlayer.play("Reload");
 		var sound = sound_direct.instance();
 		add_child(sound);
 		sound.play_sound(sound_reload);
+	emit_signal("update_ammo", nb_ammo, mag_capacity);
 
 func _on_ShotDelay_timeout():
 	can_shot = true;

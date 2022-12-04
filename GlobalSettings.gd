@@ -1,5 +1,7 @@
 extends Node
 
+var score = 0;
+
 signal fps_displayed(value)
 signal bloom_toggled(value)
 signal brightness_updated(value)

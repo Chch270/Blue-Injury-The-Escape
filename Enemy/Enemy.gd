@@ -6,6 +6,8 @@ onready var player : Node = $"../Player"
 
 onready var attack_timer = $AttackTimer;
 
+signal enemy_died;
+
 var attack_speed_multiplier = 2;
 
 var attack_target: Vector3;
@@ -75,7 +77,7 @@ func _on_PathUpdateTimer_timeout():
 		agent.set_target_location(player.transform.origin)
 
 
-func _on_Stats_you_died_signal():
+func _on_Stats_you_died_signal(give_score):
 	queue_free()
 
 

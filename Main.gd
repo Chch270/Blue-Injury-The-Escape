@@ -6,6 +6,12 @@ var ray_target = Vector3();
 onready var player = $Player;
 onready var player_hand = $Player/Body/Hand;
 
+
+func _ready():
+	$Spawner.start_next_wave();
+	$Player/GunControler.reload();
+
+
 func _physics_process(delta):
 	if is_instance_valid(player):
 		var mouse_position = get_viewport().get_mouse_position();
@@ -26,3 +32,7 @@ func _physics_process(delta):
 			if dist.length() > 3:
 				player_hand.look_at(pos, Vector3.UP);
 			
+
+
+func _on_Player_died_signal(give_score):
+	get_tree().change_scene("res://EndScreen/EndScreen.tscn");

@@ -4,7 +4,6 @@
 [ext_resource path="res://Player/GunControler.gd" type="Script" id=2]
 [ext_resource path="res://gun/Gun.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -49,8 +48,6 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0
 shape = SubResource( 7 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
-
-[node name="GUI" parent="." instance=ExtResource( 5 )]
+max_hp = 15
 
 [connection signal="you_died_signal" from="Stats" to="." method="_on_Stats_you_died_signal"]
-[connection signal="health_changed" from="Stats" to="GUI" method="_on_Player_health_changed"]

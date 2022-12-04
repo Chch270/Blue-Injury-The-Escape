@@ -5,11 +5,15 @@ class_name Stats
 signal you_died_signal
 signal health_changed
 
+export var give_score = 10
+
 export var max_hp = 10
 var current_hp = max_hp
 
+var dead: bool = false;
+
 func _ready():
-	pass # Replace with function body.
+	current_hp = max_hp
 
 
 func take_hit(damage):
@@ -17,9 +21,10 @@ func take_hit(damage):
 	emit_signal("health_changed", current_hp)
 	print("I'm hit ", current_hp, "/", max_hp)
 	
-	if current_hp <= 0:
+	if current_hp <= 0 && !dead:
 		die()
 
 
 func die():
-	emit_signal("you_died_signal")
+	dead = true;
+	emit_signal("you_died_signal", give_score)

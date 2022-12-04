@@ -1,15 +1,19 @@
 extends MarginContainer
 
-onready var number_label = $Bars/LifeBar/Count/Background/Number
+onready var number_label = $Bars/LifeBar/Count/Background/HpValue
 onready var bar = $Bars/LifeBar/TextureProgress
 onready var tween = $Tween
 
-var animated_health = 0
+onready var player: Node = get_node("/root/MainScene/Player");
+
+var animated_health = 10;
 
 
 func _ready():
-	var player_max_hp = 10
+	var player_stats : Stats = player.get_node("Stats");
+	var player_max_hp = player_stats.max_hp;
 	bar.max_value = player_max_hp
+	animated_health = player_max_hp
 	update_health(player_max_hp)
 
 
@@ -25,5 +29,5 @@ func update_health(new_value):
 
 func _process(delta):
 	var round_value = round(animated_health)
-	number_label.text = str(round_value)
+	number_label.text = String(round_value)
 	bar.value = round_value
