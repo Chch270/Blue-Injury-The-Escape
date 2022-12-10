@@ -26,7 +26,7 @@ func reload():
 	pass;
 
 func sendAmmoInfo():
-	emit_signal("update_ammo", "10", "10");
+	emit_signal("update_ammo", "∞", "∞");
 
 
 func _on_AttackerDelay_timeout():

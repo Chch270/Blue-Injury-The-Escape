@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://HUD.gd" type="Script" id=8]
 [ext_resource path="res://HUD/hud_theme.tres" type="Theme" id=9]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://audio/re2.mp3" type="AudioStream" id=11]
 
 [sub_resource type="NavigationMesh" id=7]
 vertices = PoolVector3Array( -8.75, 1.2, -11.25, -6.25, 1.2, -11.5, -6.25, 1.2, -18.5, -9.5, 1.2, -10.25, -8.75, 1.2, -11.25, -6.25, 1.2, -18.5, -18.5, 1.2, -18.5, -18.5, 1.2, -8.75, -18.5, 1.2, -8.75, -9.5, 1.2, -8.75, -9.5, 1.2, -10.25, -6.25, 1.2, -11.5, -1.5, 1.2, -11.5, -1.5, 1.2, -18.5, -6.25, 1.2, -18.5, -1.5, 1.2, -18.5, -1.5, 1.2, -11.5, 1, 1.2, -11.25, -1.5, 1.2, -18.5, 1, 1.2, -11.25, 1.75, 1.2, -10.25, 18.5, 1.2, -9, 18.5, 1.2, -18.5, 1.75, 1.2, -10.25, 1.75, 1.2, -9.25, 18.5, 1.2, -9, 9.5, 1.2, 3.25, 9.75, 1.2, 5, 18.5, 1.2, 5, 1.5, 1.2, -7.25, 0, 1.2, -6.25, 0.25, 1.2, 2.5, 8.5, 1.2, 2.5, 8.5, 1.2, 2.5, 9.5, 1.2, 3.25, 18.5, 1.2, 5, 18.5, 1.2, -9, 1.75, 1.2, -9.25, 1.5, 1.2, -7.25, -9.5, 1.2, -7.5, -9.5, 1.2, -8.75, -18.5, 1.2, -8.75, -1.25, 1.2, 3.25, 0.25, 1.2, 2.5, 0, 1.2, -6.25, -8.25, 1.2, -6.25, -8.25, 1.2, -6.25, -9.5, 1.2, -7.5, -18.5, 1.2, -8.75, -18.5, 1.2, 5.25, -1.5, 1.2, 5.25, -1.25, 1.2, 3.25, 18.5, 1.2, 5, 9.75, 1.2, 5, 9.75, 1.2, 6.25, 18.5, 1.2, 5, 9.75, 1.2, 6.25, 8.75, 1.2, 7.5, 7, 1.2, 18.5, 18.5, 1.2, 18.5, 8.75, 1.2, 7.5, 6.75, 1.2, 7.75, 7, 1.2, 18.5, 1, 1.2, 18.5, 1.25, 1.2, 7.75, -0.75, 1.2, 7.5, 1, 1.2, 18.5, -0.75, 1.2, 7.5, -1.5, 1.2, 6.5, -18.5, 1.2, 5.25, -18.5, 1.2, 18.5, -1.5, 1.2, 6.5, -1.5, 1.2, 5.25, -18.5, 1.2, 5.25, 1, 1.2, 18.5, 7, 1.2, 18.5, 6.75, 1.2, 7.75, 1.25, 1.2, 7.75 )
@@ -22,6 +23,10 @@ albedo_color = Color( 0.25098, 0.2, 0.2, 1 )
 
 [node name="MainScene" type="Spatial"]
 script = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
@@ -43,15 +48,51 @@ Enemy = ExtResource( 6 )
 
 [node name="Wave" type="Node" parent="Spawner/Waves"]
 script = ExtResource( 4 )
-nb_enemies = 2
 
 [node name="Wave2" type="Node" parent="Spawner/Waves"]
 script = ExtResource( 4 )
-nb_enemies = 5
+nb_enemies = 7
+seconds_between_spawns = 1.5
 
 [node name="Wave3" type="Node" parent="Spawner/Waves"]
 script = ExtResource( 4 )
-nb_enemies = 7
+nb_enemies = 9
+seconds_between_spawns = 1.5
+
+[node name="Wave4" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 11
+seconds_between_spawns = 1.0
+
+[node name="Wave5" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 13
+seconds_between_spawns = 1.0
+
+[node name="Wave6" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 16
+seconds_between_spawns = 0.7
+
+[node name="Wave7" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 20
+seconds_between_spawns = 0.5
+
+[node name="Wave8" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 25
+seconds_between_spawns = 0.3
+
+[node name="Wave9" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 30
+seconds_between_spawns = 0.3
+
+[node name="Wave10" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 40
+seconds_between_spawns = 0.3
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
 navmesh = SubResource( 7 )

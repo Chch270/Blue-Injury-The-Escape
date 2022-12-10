@@ -43,6 +43,7 @@ func _on_Enemy_Stats_you_died_signal(give_score):
 func _on_Timer_timeout():
 	if enemies_remaining_to_spawn:
 		var enemy = Enemy.instance();
+		enemy.speed += wave_number;
 		connect_to_enemy_signal(enemy);
 		get_parent().add_child(enemy);
 		enemies_remaining_to_spawn -= 1;

@@ -27,7 +27,7 @@ enum state {
 
 var current_state = state.SPAWNING;
 
-var speed = 5.0
+export var speed = 5.0
 
 onready var agent : NavigationAgent = $agent
 
@@ -40,7 +40,7 @@ func _physics_process(delta):
 		match current_state:
 			state.SPAWNING:
 				animator.play("SPAWN");
-				spawning_timer.start(2.87);
+				spawning_timer.start(2.8);
 				current_state = state.REST;
 			state.SEECK:
 				look_at(player.transform.origin, Vector3.UP);
