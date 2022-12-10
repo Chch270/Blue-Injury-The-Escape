@@ -26,7 +26,7 @@ enum state {
 
 var current_state = state.SPAWNING;
 
-var speed = 5.0
+var speed = 9
 
 onready var agent : NavigationAgent = $agent
 
@@ -39,7 +39,7 @@ func _physics_process(delta):
 		match current_state:
 			state.SPAWNING:
 				animator.play("SPAWN");
-				spawning_timer.start(2.87);
+				spawning_timer.start(0.8);
 				current_state = state.REST;
 			state.SEECK:
 				look_at(player.transform.origin, Vector3.UP);
@@ -98,7 +98,7 @@ func _on_AttackTimer_timeout():
 		var player_stats : Stats = player.get_node("Stats");
 		player_stats.take_hit(1);
 		current_state = state.REST;
-		attack_timer.start(0.5);
+		attack_timer.start(0.2);
 	else:
 		if is_inrange:
 			current_state = state.ATTACK;

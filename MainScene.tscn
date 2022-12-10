@@ -58,6 +58,33 @@ nb_enemies = 5
 script = ExtResource( 4 )
 nb_enemies = 7
 
+[node name="Wave4" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+
+[node name="Wave5" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 13
+
+[node name="Wave6" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 16
+
+[node name="Wave7" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 20
+
+[node name="Wave8" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 25
+
+[node name="Wave9" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 30
+
+[node name="Wave10" type="Node" parent="Spawner/Waves"]
+script = ExtResource( 4 )
+nb_enemies = 40
+
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
 navmesh = SubResource( 7 )
 
