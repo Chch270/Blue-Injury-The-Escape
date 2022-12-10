@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Parts.jpg-2766ab7feb1fd92035224c314b1ebda4.s3tc.stex"
-path.etc2="res://.import/Parts.jpg-2766ab7feb1fd92035224c314b1ebda4.etc2.stex"
+path.s3tc="res://.import/MagPlane.jpg-ad66f895fbc7b722503eb8995ad37208.s3tc.stex"
+path.etc2="res://.import/MagPlane.jpg-ad66f895fbc7b722503eb8995ad37208.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/materials/Parts.jpg"
-dest_files=[ "res://.import/Parts.jpg-2766ab7feb1fd92035224c314b1ebda4.s3tc.stex", "res://.import/Parts.jpg-2766ab7feb1fd92035224c314b1ebda4.etc2.stex" ]
+source_file="res://weapons/materials/MagPlane.jpg"
+dest_files=[ "res://.import/MagPlane.jpg-ad66f895fbc7b722503eb8995ad37208.s3tc.stex", "res://.import/MagPlane.jpg-ad66f895fbc7b722503eb8995ad37208.etc2.stex" ]
 
 [params]
 

@@ -6,6 +6,7 @@ signal you_died_signal
 signal health_changed
 
 export var give_score = 10
+export var entity_name = "None";
 
 export var max_hp = 10
 var current_hp = max_hp

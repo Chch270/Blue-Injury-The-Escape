@@ -1,17 +1,16 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://gun/materials/Reference.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://gun/materials/Parts.jpg" type="Texture" id=2]
-[ext_resource path="res://gun/materials/Base.jpg" type="Texture" id=3]
-[ext_resource path="res://gun/materials/MagPlane.jpg" type="Texture" id=4]
-[ext_resource path="res://gun/materials/Vise.jpg" type="Texture" id=5]
-[ext_resource path="res://gun/Gun.gd" type="Script" id=6]
-[ext_resource path="res://gun/materials/GripMat.jpg" type="Texture" id=7]
-[ext_resource path="res://gun/materials/Mag.jpg" type="Texture" id=8]
-[ext_resource path="res://gun/materials/Safety.jpg" type="Texture" id=9]
-[ext_resource path="res://gun/materials/EjectionPort.jpg" type="Texture" id=10]
-[ext_resource path="res://gun/materials/Grip.jpg" type="Texture" id=11]
-[ext_resource path="res://bullet/Bullet.tscn" type="PackedScene" id=12]
+[ext_resource path="res://weapons/Gun.gd" type="Script" id=1]
+[ext_resource path="res://bullet/Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weapons/materials/Safety.jpg" type="Texture" id=3]
+[ext_resource path="res://weapons/materials/EjectionPort.jpg" type="Texture" id=4]
+[ext_resource path="res://weapons/materials/GripMat.jpg" type="Texture" id=5]
+[ext_resource path="res://weapons/materials/Vise.jpg" type="Texture" id=6]
+[ext_resource path="res://weapons/materials/Mag.jpg" type="Texture" id=7]
+[ext_resource path="res://weapons/materials/Base.jpg" type="Texture" id=9]
+[ext_resource path="res://weapons/materials/Parts.jpg" type="Texture" id=10]
+[ext_resource path="res://weapons/materials/Grip.jpg" type="Texture" id=11]
+[ext_resource path="res://weapons/materials/Reference.obj" type="ArrayMesh" id=12]
 
 [sub_resource type="Animation" id=4]
 resource_name = "Fire"
@@ -98,51 +97,51 @@ tracks/1/keys = {
 }
 
 [sub_resource type="SpatialMaterial" id=7]
-albedo_texture = ExtResource( 9 )
-
-[sub_resource type="SpatialMaterial" id=8]
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=9]
-albedo_texture = ExtResource( 2 )
-
-[sub_resource type="SpatialMaterial" id=10]
 albedo_texture = ExtResource( 3 )
 
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 10 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 10 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_texture = ExtResource( 9 )
+
 [sub_resource type="SpatialMaterial" id=11]
-albedo_texture = ExtResource( 2 )
+albedo_texture = ExtResource( 4 )
 
 [sub_resource type="SpatialMaterial" id=12]
-albedo_color = Color( 0, 0, 0, 1 )
+albedo_texture = ExtResource( 10 )
 
 [sub_resource type="SpatialMaterial" id=13]
 albedo_texture = ExtResource( 11 )
 
 [sub_resource type="SpatialMaterial" id=14]
-albedo_texture = ExtResource( 7 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=15]
-albedo_texture = ExtResource( 8 )
+albedo_texture = ExtResource( 7 )
 
 [sub_resource type="SpatialMaterial" id=16]
 albedo_texture = ExtResource( 10 )
 
 [sub_resource type="SpatialMaterial" id=17]
-albedo_texture = ExtResource( 2 )
+albedo_texture = ExtResource( 6 )
 
 [sub_resource type="SpatialMaterial" id=18]
-albedo_texture = ExtResource( 3 )
+albedo_texture = ExtResource( 9 )
 
 [sub_resource type="SpatialMaterial" id=19]
-albedo_texture = ExtResource( 4 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=20]
-albedo_texture = ExtResource( 5 )
+albedo_texture = ExtResource( 6 )
 
 [node name="Gun" type="Spatial"]
 transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 0, 0, 1.1645 )
-script = ExtResource( 6 )
-Bullet = ExtResource( 12 )
+script = ExtResource( 1 )
+Bullet = ExtResource( 2 )
 
 [node name="Muzzle" type="Position3D" parent="."]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.83871, 0.47158, -0.459385 )
@@ -161,7 +160,7 @@ anims/Reload = SubResource( 6 )
 
 [node name="Reference" type="MeshInstance" parent="."]
 transform = Transform( 1.50996e-08, 0, -0.2, 0, 0.2, 0, 0.2, 0, 1.50996e-08, -1.42857, 0, -0.582649 )
-mesh = ExtResource( 1 )
+mesh = ExtResource( 12 )
 material/0 = SubResource( 7 )
 material/1 = SubResource( 8 )
 material/2 = SubResource( 9 )
@@ -176,9 +175,6 @@ material/11 = SubResource( 17 )
 material/12 = SubResource( 18 )
 material/13 = SubResource( 19 )
 material/14 = SubResource( 20 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [connection signal="timeout" from="ShotDelay" to="." method="_on_ShotDelay_timeout"]
 [connection signal="timeout" from="ReloadDelay" to="." method="_on_ReloadDelay_timeout"]

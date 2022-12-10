@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Indicator.png-47fdd8d3b0f68a3835f8be375cf245f7.s3tc.stex"
-path.etc2="res://.import/Indicator.png-47fdd8d3b0f68a3835f8be375cf245f7.etc2.stex"
+path.s3tc="res://.import/Parts.jpg-d289f43b23953bc688612ae2e0c99fe6.s3tc.stex"
+path.etc2="res://.import/Parts.jpg-d289f43b23953bc688612ae2e0c99fe6.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/materials/Indicator.png"
-dest_files=[ "res://.import/Indicator.png-47fdd8d3b0f68a3835f8be375cf245f7.s3tc.stex", "res://.import/Indicator.png-47fdd8d3b0f68a3835f8be375cf245f7.etc2.stex" ]
+source_file="res://weapons/materials/Parts.jpg"
+dest_files=[ "res://.import/Parts.jpg-d289f43b23953bc688612ae2e0c99fe6.s3tc.stex", "res://.import/Parts.jpg-d289f43b23953bc688612ae2e0c99fe6.etc2.stex" ]
 
 [params]
 

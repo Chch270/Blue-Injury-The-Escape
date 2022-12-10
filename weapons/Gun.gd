@@ -7,6 +7,8 @@ var sound_shooting = preload("res://audio/gun-shot.mp3");
 var sound_reload = preload("res://audio/reload.mp3");
 var sound_empty_shot = preload("res://audio/empty-gun-shot.mp3");
 
+onready var animationGun = $AnimationPlayer;
+
 onready var rof_time = $ShotDelay
 var can_shot = true;
 
@@ -14,7 +16,7 @@ onready var reload_time = $ReloadDelay
 var is_reloading = false;
 
 export var muzzle_speed = 30;
-export var millis_between_shots = 100;
+export var millis_between_shots = 200;
 
 signal update_ammo;
 
@@ -38,7 +40,7 @@ func shoot():
 		rof_time.start();
 		nb_ammo -= 1;
 		emit_signal("update_ammo", nb_ammo, mag_capacity);
-		$AnimationPlayer.play("Fire");
+		animationGun.play("Fire");
 		var sound = sound_direct.instance();
 		add_child(sound);
 		sound.play_sound(sound_shooting);
@@ -54,10 +56,13 @@ func reload():
 		nb_ammo = mag_capacity;
 		is_reloading = true;
 		reload_time.start()
-		$AnimationPlayer.play("Reload");
+		animationGun.play("Reload");
 		var sound = sound_direct.instance();
 		add_child(sound);
 		sound.play_sound(sound_reload);
+		sendAmmoInfo();
+
+func sendAmmoInfo():
 	emit_signal("update_ammo", nb_ammo, mag_capacity);
 
 func _on_ShotDelay_timeout():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/GunControler.gd" type="Script" id=2]
-[ext_resource path="res://gun/Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://weapons/Gun.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Katana/Katana.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -41,13 +42,14 @@ transform = Transform( 1.91068e-15, -4.37113e-08, -0.999999, -0.999999, -4.37113
 
 [node name="GunControler" type="Node" parent="."]
 script = ExtResource( 2 )
-Weapon = ExtResource( 3 )
+weapon_inventory = [ ExtResource( 3 ), ExtResource( 5 ) ]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 7 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
+entity_name = "Player"
 max_hp = 15
 
 [connection signal="you_died_signal" from="Stats" to="." method="_on_Stats_you_died_signal"]

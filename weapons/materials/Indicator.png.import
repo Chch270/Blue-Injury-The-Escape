@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Grip.jpg-76888bec9da17a1f8ea659810370b53d.s3tc.stex"
-path.etc2="res://.import/Grip.jpg-76888bec9da17a1f8ea659810370b53d.etc2.stex"
+path.s3tc="res://.import/Indicator.png-e8d8e2421b872d4d3fc958724bef7959.s3tc.stex"
+path.etc2="res://.import/Indicator.png-e8d8e2421b872d4d3fc958724bef7959.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/materials/Grip.jpg"
-dest_files=[ "res://.import/Grip.jpg-76888bec9da17a1f8ea659810370b53d.s3tc.stex", "res://.import/Grip.jpg-76888bec9da17a1f8ea659810370b53d.etc2.stex" ]
+source_file="res://weapons/materials/Indicator.png"
+dest_files=[ "res://.import/Indicator.png-e8d8e2421b872d4d3fc958724bef7959.s3tc.stex", "res://.import/Indicator.png-e8d8e2421b872d4d3fc958724bef7959.etc2.stex" ]
 
 [params]
 

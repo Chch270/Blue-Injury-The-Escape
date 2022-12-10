@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Cartridges.jpg-515a019be42cba50f36d3bca5b999365.s3tc.stex"
-path.etc2="res://.import/Cartridges.jpg-515a019be42cba50f36d3bca5b999365.etc2.stex"
+path.s3tc="res://.import/EjectionPort.jpg-3af931c7689a5e1318b8b01f406847a6.s3tc.stex"
+path.etc2="res://.import/EjectionPort.jpg-3af931c7689a5e1318b8b01f406847a6.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/materials/Cartridges.jpg"
-dest_files=[ "res://.import/Cartridges.jpg-515a019be42cba50f36d3bca5b999365.s3tc.stex", "res://.import/Cartridges.jpg-515a019be42cba50f36d3bca5b999365.etc2.stex" ]
+source_file="res://weapons/materials/EjectionPort.jpg"
+dest_files=[ "res://.import/EjectionPort.jpg-3af931c7689a5e1318b8b01f406847a6.s3tc.stex", "res://.import/EjectionPort.jpg-3af931c7689a5e1318b8b01f406847a6.etc2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=1
+compress/normal_map=0
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true

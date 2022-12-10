@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/EjectionPort.jpg-904592d503f399aab46a6665e7197660.s3tc.stex"
-path.etc2="res://.import/EjectionPort.jpg-904592d503f399aab46a6665e7197660.etc2.stex"
+path.s3tc="res://.import/Vise.jpg-d0c8e626e23ccdba0e2dbf5260028c98.s3tc.stex"
+path.etc2="res://.import/Vise.jpg-d0c8e626e23ccdba0e2dbf5260028c98.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/materials/EjectionPort.jpg"
-dest_files=[ "res://.import/EjectionPort.jpg-904592d503f399aab46a6665e7197660.s3tc.stex", "res://.import/EjectionPort.jpg-904592d503f399aab46a6665e7197660.etc2.stex" ]
+source_file="res://weapons/materials/Vise.jpg"
+dest_files=[ "res://.import/Vise.jpg-d0c8e626e23ccdba0e2dbf5260028c98.s3tc.stex", "res://.import/Vise.jpg-d0c8e626e23ccdba0e2dbf5260028c98.etc2.stex" ]
 
 [params]
 

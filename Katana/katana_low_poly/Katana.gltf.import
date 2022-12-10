@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/bullet.FBX-916611cb05493318258a16ff20f72b48.scn"
+path="res://.import/Katana.gltf-e58eac6f12a2f28b73cfe3062226f7eb.scn"
 
 [deps]
 
-source_file="res://gun/materials/bullet.FBX"
-dest_files=[ "res://.import/bullet.FBX-916611cb05493318258a16ff20f72b48.scn" ]
+source_file="res://Katana/katana_low_poly/Katana.gltf"
+dest_files=[ "res://.import/Katana.gltf-e58eac6f12a2f28b73cfe3062226f7eb.scn" ]
 
 [params]
 

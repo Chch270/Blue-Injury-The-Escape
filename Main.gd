@@ -9,7 +9,7 @@ onready var player_hand = $Player/Body/Hand;
 
 func _ready():
 	$Spawner.start_next_wave();
-	$Player/GunControler.reload();
+	$Player/GunControler.sendAmmoInfo();
 
 
 func _physics_process(delta):

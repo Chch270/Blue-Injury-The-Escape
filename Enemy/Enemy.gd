@@ -15,6 +15,7 @@ var attack_speed_multiplier = 2;
 
 var attacking: bool = false;
 var is_inrange: bool = false;
+var spawning: bool = true;
 
 enum state {
 	SPAWNING,
@@ -80,16 +81,15 @@ func _on_Stats_you_died_signal(give_score):
 func _on_AttaqueRange_body_entered(body):
 	if body == player:
 		is_inrange = true;
-		if current_state != state.SPAWNING:
+		if !spawning:
 			current_state = state.ATTACK;
-#	collide_with_other_enemies(false);
 
 
 func _on_AttaqueRange_body_exited(body):
 	if body == player:
-		attacking = false;
 		is_inrange = false;
-		attack_timer.start(0.5);
+		if spawning:
+			attack_timer.start(0.5);
 
 
 func _on_AttackTimer_timeout():
@@ -108,8 +108,14 @@ func _on_AttackTimer_timeout():
 
 
 func _on_SpaningTimer_timeout():
+	spawning = false;
 	if is_inrange:
 		current_state = state.ATTACK;
 	else:
 		current_state = state.SEECK;
 		animator.playback_speed = 1.0;
+
+
+func _on_AttaqueRange2_body_exited(body):
+	if body == player && attacking:
+		attacking = false;

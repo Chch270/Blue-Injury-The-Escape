@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/ChargingHandle.jpg-1042260ba7cf8911407a2fca732df2c9.s3tc.stex"
-path.etc2="res://.import/ChargingHandle.jpg-1042260ba7cf8911407a2fca732df2c9.etc2.stex"
+path.s3tc="res://.import/ChargingHandle.jpg-015d6a506347981731ac7a76a6c44358.s3tc.stex"
+path.etc2="res://.import/ChargingHandle.jpg-015d6a506347981731ac7a76a6c44358.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/materials/ChargingHandle.jpg"
-dest_files=[ "res://.import/ChargingHandle.jpg-1042260ba7cf8911407a2fca732df2c9.s3tc.stex", "res://.import/ChargingHandle.jpg-1042260ba7cf8911407a2fca732df2c9.etc2.stex" ]
+source_file="res://weapons/materials/ChargingHandle.jpg"
+dest_files=[ "res://.import/ChargingHandle.jpg-015d6a506347981731ac7a76a6c44358.s3tc.stex", "res://.import/ChargingHandle.jpg-015d6a506347981731ac7a76a6c44358.etc2.stex" ]
 
 [params]
 

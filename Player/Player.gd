@@ -36,6 +36,15 @@ func _physics_process(delta):
 	if Input.is_key_pressed(KEY_R):
 		gun_controller.reload();
 
+func _input(event):
+	if Input.is_action_pressed("scroll_up"):
+		print("UP");
+		gun_controller.change_weapon(-1);
+	if Input.is_action_pressed("scroll_down"):
+		print("DOWN")
+		gun_controller.change_weapon(1);
+
+
 
 func _on_Stats_you_died_signal(give_score):
 	queue_free();
