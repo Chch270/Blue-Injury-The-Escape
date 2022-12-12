@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/scene.gltf-685af8a7879562f817f2d3e864c27382.scn"
+path="res://.import/scene.gltf-5b453c689f0fbb33d5682549fd8391e9.scn"
 
 [deps]
 
-source_file="res://Models/Map1/barberdwire/scene.gltf"
-dest_files=[ "res://.import/scene.gltf-685af8a7879562f817f2d3e864c27382.scn" ]
+source_file="res://Models/Map1/barbedwires/scene.gltf"
+dest_files=[ "res://.import/scene.gltf-5b453c689f0fbb33d5682549fd8391e9.scn" ]
 
 [params]
 

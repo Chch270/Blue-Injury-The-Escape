@@ -1,0 +1,11 @@
+Model Information:
+* title:	Barbedwires
+* source:	https://sketchfab.com/3d-models/barbedwires-059a13dc3e874471aeb0994aebcc7880
+* author:	defaltho (https://sketchfab.com/defaltho)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Barbedwires" (https://sketchfab.com/3d-models/barbedwires-059a13dc3e874471aeb0994aebcc7880) by defaltho (https://sketchfab.com/defaltho) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
