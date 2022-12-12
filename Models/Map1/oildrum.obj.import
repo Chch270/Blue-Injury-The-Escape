@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/oildrum.obj-99c576d60ad0b2bf58406304b04aa934.mesh"
+
+[deps]
+
+files=[ "res://.import/oildrum.obj-99c576d60ad0b2bf58406304b04aa934.mesh" ]
+
+source_file="res://Models/Map1/oildrum.obj"
+dest_files=[ "res://.import/oildrum.obj-99c576d60ad0b2bf58406304b04aa934.mesh", "res://.import/oildrum.obj-99c576d60ad0b2bf58406304b04aa934.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
