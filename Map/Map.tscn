@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Texture/Map1/buildings.material" type="Material" id=1]
 [ext_resource path="res://Map/map.obj" type="ArrayMesh" id=2]
@@ -18,9 +18,10 @@
 [ext_resource path="res://Texture/Map1/top_and_stairs_trailer.png" type="Texture" id=16]
 [ext_resource path="res://Models/Map1/old_trailer_obj.obj" type="ArrayMesh" id=17]
 [ext_resource path="res://Texture/Map1/trailer_sides.png" type="Texture" id=18]
-[ext_resource path="res://Models/Map1/scene.gltf" type="PackedScene" id=19]
+[ext_resource path="res://Models/Map1/barberdwire/scene.gltf" type="PackedScene" id=19]
 [ext_resource path="res://Models/Map1/oildrum.obj" type="ArrayMesh" id=20]
 [ext_resource path="res://Texture/Map1/oildrum_col.jpg" type="Texture" id=21]
+[ext_resource path="res://Models/Map1/lowpoly_concrete_barrier/scene.gltf" type="PackedScene" id=24]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 3 )
@@ -150,8 +151,10 @@ albedo_texture = ExtResource( 18 )
 [sub_resource type="SpatialMaterial" id=30]
 albedo_texture = ExtResource( 21 )
 
+[sub_resource type="BoxShape" id=32]
+extents = Vector3( 97.6129, 47.701, 80.0237 )
+
 [node name="Spatial" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2482, 0, 50.2135 )
 
 [node name="map" type="MeshInstance" parent="."]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -12.2929, 0 )
@@ -175,7 +178,7 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 16 )
 
 [node name="Debris" type="MeshInstance" parent="Spatial"]
-transform = Transform( 0.878425, 0, 0.477879, 0, 1, 0, -0.477879, 0, 0.878425, 29.7349, -0.6, 0.682266 )
+transform = Transform( 0.878425, 0, 0.477879, 0, 1, 0, -0.477879, 0, 0.878425, 29.735, -0.7, 0.682 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 17 )
@@ -235,7 +238,7 @@ material/53 = SubResource( 22 )
 material/54 = SubResource( 17 )
 
 [node name="Debris2" type="MeshInstance" parent="Spatial"]
-transform = Transform( 0.347394, 0, -0.937719, 0, 1, 0, 0.937719, 0, 0.347394, 3.26134, -0.6, 0.682266 )
+transform = Transform( 0.347394, 0, -0.937719, 0, 1, 0, 0.937719, 0, 0.347394, 3.261, -0.7, 0.682 )
 mesh = ExtResource( 6 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 17 )
@@ -337,6 +340,7 @@ process_material = SubResource( 14 )
 draw_pass_1 = SubResource( 15 )
 
 [node name="StaticBody" type="StaticBody" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.547 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Spatial/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8872, 10.0483, -14.8814 )
@@ -748,3 +752,50 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.83911
 [node name="CollisionShape" type="CollisionShape" parent="Spatial4/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8873, 10.0483, -14.8814 )
 shape = SubResource( 29 )
+
+[node name="Spatial5" type="Spatial" parent="."]
+
+[node name="scene4" parent="Spatial5" instance=ExtResource( 24 )]
+transform = Transform( 0.057791, 0, -0.055319, 0, 0.08, 0, 0.055319, 0, 0.057791, -27.6454, 12, -320.71 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial5/scene4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial5/scene4/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84229, -74.4406, -50.899 )
+shape = SubResource( 32 )
+
+[node name="scene5" parent="Spatial5" instance=ExtResource( 24 )]
+transform = Transform( -0.0554782, 0, 0.0576383, 0, 0.08, 0, -0.0576383, 0, -0.0554782, -62.7626, 12, -185.837 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial5/scene5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial5/scene5/StaticBody"]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 1.84229, -74.4406, -50.8992 )
+shape = SubResource( 32 )
+
+[node name="scene6" parent="Spatial5" instance=ExtResource( 24 )]
+transform = Transform( -0.0766218, 0, 0.0230022, 0, 0.08, 0, -0.0230022, 0, -0.0766218, -143.682, 12, -116.089 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial5/scene6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial5/scene6/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84229, -74.4406, -50.899 )
+shape = SubResource( 32 )
+
+[node name="scene7" parent="Spatial5" instance=ExtResource( 24 )]
+transform = Transform( 0.0557522, 0, 0.0573733, 0, 0.08, 0, -0.0573733, 0, 0.0557522, 52.0724, 12, -403.309 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial5/scene7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial5/scene7/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84229, -74.4406, -50.899 )
+shape = SubResource( 32 )
+
+[node name="scene8" parent="Spatial5" instance=ExtResource( 24 )]
+transform = Transform( -0.0759273, 0, -0.0252002, 0, 0.08, 0, 0.0252002, 0, -0.0759273, -28.6213, 12, -186.23 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial5/scene8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial5/scene8/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84229, -74.4406, -50.899 )
+shape = SubResource( 32 )
