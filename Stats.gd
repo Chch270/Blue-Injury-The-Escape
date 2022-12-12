@@ -29,5 +29,6 @@ func take_hit(damage):
 
 
 func die():
+	$Death.play()
 	dead = true;
 	emit_signal("you_died_signal", give_score)
