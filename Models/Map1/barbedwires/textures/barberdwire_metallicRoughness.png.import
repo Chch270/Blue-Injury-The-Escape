@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/barberdwire_metallicRoughness.png-e0a73d2817f601998d03122163c58754.s3tc.stex"
-path.etc2="res://.import/barberdwire_metallicRoughness.png-e0a73d2817f601998d03122163c58754.etc2.stex"
+path.s3tc="res://.import/barberdwire_metallicRoughness.png-d343046482b3bfb1baeffa770de218ad.s3tc.stex"
+path.etc2="res://.import/barberdwire_metallicRoughness.png-d343046482b3bfb1baeffa770de218ad.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/Map1/barberdwire/textures/barberdwire_metallicRoughness.png"
-dest_files=[ "res://.import/barberdwire_metallicRoughness.png-e0a73d2817f601998d03122163c58754.s3tc.stex", "res://.import/barberdwire_metallicRoughness.png-e0a73d2817f601998d03122163c58754.etc2.stex" ]
+source_file="res://Models/Map1/barbedwires/textures/barberdwire_metallicRoughness.png"
+dest_files=[ "res://.import/barberdwire_metallicRoughness.png-d343046482b3bfb1baeffa770de218ad.s3tc.stex", "res://.import/barberdwire_metallicRoughness.png-d343046482b3bfb1baeffa770de218ad.etc2.stex" ]
 
 [params]
 
