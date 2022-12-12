@@ -15,19 +15,19 @@ var dead: bool = false;
 onready var blood : Particles = $"../Blood"
 
 func _ready():
-    current_hp = max_hp
+	current_hp = max_hp
 
 
 func take_hit(damage):
-    current_hp -= damage;
-    emit_signal("health_changed", current_hp)
-    print("I'm hit ", current_hp, "/", max_hp)
-    blood.emitting = true
-    
-    if current_hp <= 0 && !dead:
-        die()
+	current_hp -= damage;
+	emit_signal("health_changed", current_hp)
+	print("I'm hit ", current_hp, "/", max_hp)
+	blood.emitting = true
+	$Damage.play()
+	if current_hp <= 0 && !dead:
+		die()
 
 
 func die():
-    dead = true;
-    emit_signal("you_died_signal", give_score)
+	dead = true;
+	emit_signal("you_died_signal", give_score)
